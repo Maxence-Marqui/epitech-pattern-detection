@@ -1,0 +1,4 @@
+Utilisation de VGG16
+Résulats décevant, commence avec plus de 4 de loss et 0.82 d'accuracy
+Après 7 epochs => 1.5 de loss et 0.88 d'accuracy
+Résultat = Abandon

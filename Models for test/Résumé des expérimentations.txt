@@ -1,0 +1,40 @@
+L'objectif de ces expérimentations étaient de prendre un peu en main keras de Tensorflow, 
+étant donné qu'il s'agissait de la première fois que nous conduisions des projets nécessitant du 
+machine learning et la construction de models.
+
+Il y a donc 3 modèles de test qui ont été crées, certains abandonnés et d'autres conservés, 
+même si au final aucun n'a été choisi pour être réellement utilisés.
+
+Modèle 1:
+Le premier modèle était une tentative d'adaptation et de reconstrusction du modèle VGG16, connu et très 
+utilisé pour la détection de feature dans des images de couleurs.
+Les résultats ont été relativement acceptables, avec un démarrage avec des loss a 0.4353 et une accuracy de 
+0.8213, pour obtenir un final a 0.2973 de loss et 0.8937 d'accuracy
+
+Ce modèle était relativement bon, d'autant plus si on prend en compte qu'il s'agit d'un modèle pour des images
+en couleurs plutot que du noir en blanc comme on lui a donné.
+Il est aussi important de noter qu'il y a eut de la data augmentation pour augmenter le nombre d'images 
+d'entrainement disponibles
+
+Modèle 2:
+Le second modèle est le modèle VGG16 initial, peu de chose à dire sur celui-ci, en dehors du fait que le résultat 
+fut très en dessous de celui attendu.
+Ce modèle commence avec des loss de plus de 4 pour une accuracy de 0.8236, mais n'a pas montré d'amélioration suffisante
+pour être retenu.
+Il a était abandonné après 7 epochs, celle-ci étant extrêmement longues (40 minutes pour chacunes) pour un résultat "final"
+d'uniquement 1.5 de loss pour 0.88 d'accuracy.
+
+Modèle 3:
+Ce dernier modèle est beaucoup plus simpliste que les 2 premiers, étant basés sur des explications données par chatGPT du
+fonctionnement d'un réseau neuronal et des différents types de couches ainsi que leur utilités respectives.
+Celui-ci commence avec 40 de loss pour 0.5 d'accuracy, avant de rapidement s'amélioré et se stabiliser aux alentours 
+de l'epoch 11.
+Cependant, passé ce point, le modèle semble commencer overfit les données de manière extrême, passant la fonction de loss en 
+négatif (-0.6 à l'epoch 12) en tombant en flèche, pour un résultat final de loss à -282.
+De plus les tests finaux pour valider donne des loss de 585.122 pour une accuracy de 0.8582, somme toute inutilisable.
+
+
+Nous avons donc 3 exemples typiques des erreurs et problèmes liés a l'entrainement de modèles, avec le premier qui est tout juste acceptable, 
+mais pour autant assez peu précis pour être gardé, le deuxième qui prend beaucoup trop longtemps a entrainer pour un résultat médiocre, lié
+au fait qu'il ne soit pas adapté aux images qui lui sont fournis, et le 3ème qui était prometteur, mais qui au final overfit complètement et
+est donc inutilisable également

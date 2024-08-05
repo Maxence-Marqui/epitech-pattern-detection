@@ -1,0 +1,6 @@
+Utilisation d'un modèle basique basé sur des informations de chatGPT
+Commence avec 50% d'accuracy et 40 de loss
+Diminue rapidement jusqu'a se stabilisé
+Période de loss négatives a partir de epoch 12 (-0.06) jusqu'a la fin (-282)
+Test Loss = 565.122
+Test Accuracy = 0.8582

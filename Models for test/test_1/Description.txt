@@ -1,0 +1,3 @@
+Tentative de recréation de VGG16
+Résultats acceptables démarrage a loss 0.4353 et accuraccy 0.8213
+Fini à 0.2973 loss et accuracy 0.8937
